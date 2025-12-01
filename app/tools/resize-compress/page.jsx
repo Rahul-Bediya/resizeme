@@ -701,7 +701,7 @@ export default function ResizeCompressPage() {
         </h1>
         <p className="text-sm md:text-base text-slate-500 max-w-2xl mx-auto">
           Resize images by pixels, crop precisely, and compress to exact KB/MB values.
-          Includes popular exam photo presets inspired by Pi7 tools.
+          Includes popular exam photo presets .
         </p>
       </header>
 
