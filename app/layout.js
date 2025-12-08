@@ -23,22 +23,11 @@ export default function RootLayout({ children }) {
         <div className="max-w-6xl mx-auto px-4 py-6">
           {children}
         </div>
-        <script
+       <script
           dangerouslySetInnerHTML={{
-            __html: `
-      if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function(reg) {
-              console.log("Monetag SW registered:", reg.scope);
-            })
-            .catch(function(err) {
-              console.error("SW registration failed:", err);
-            });
-        });
-      }
-    `,
-          }} />
+            __html: `(function(){var s=document.createElement('script'); s.async=true; s.src='https://alwingulla.com/88/6028495.js'; document.body.appendChild(s);})();`,
+          }}
+        />
       </body>
     </html>
   );
