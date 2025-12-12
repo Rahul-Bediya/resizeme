@@ -1,5 +1,6 @@
 // app/page.jsx
 import Link from "next/link";
+import AdestraAd from "../component/ads"
 
 export default function HomePage() {
   const tools = [
@@ -117,7 +118,7 @@ export default function HomePage() {
 
         </div>
       </section>
-
+      <AdestraAd/>
       {/* SIMPLE FOOTER STRIP (inside page container) */}
       <section className="border-t border-slate-200 pt-6 text-xs text-slate-400 flex flex-wrap items-center justify-between gap-2">
         <p>© {new Date().getFullYear()} resizeme. All rights reserved.</p>

