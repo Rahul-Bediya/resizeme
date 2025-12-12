@@ -1,6 +1,7 @@
 // app/page.jsx
 import Link from "next/link";
 import AdestraAd from "../component/ads"
+import AdLink from "@/component/adlink";
 
 export default function HomePage() {
   const tools = [
@@ -56,13 +57,21 @@ export default function HomePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
+            {/* <Link
+              href="/redirect-ad?to=/tools/resize-compress"
+              className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-sky-700 transition"
+            >
+              Start Editing Free
+              <span className="ml-2 text-base">➜</span>
+            </Link> */}
+
+            <AdLink
               href="/tools/resize-compress"
               className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-sky-700 transition"
             >
               Start Editing Free
               <span className="ml-2 text-base">➜</span>
-            </Link>
+            </AdLink>
             <a
               href="#tools"
               className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-semibold text-slate-800 hover:border-sky-300 hover:text-sky-700 transition"
@@ -100,7 +109,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {tools.map((tool) => (
+          {/* {tools.map((tool) => (
             <Link
               key={tool.title}                 // 👈 use title (or href+title) as key
               href={tool.href}
@@ -114,11 +123,28 @@ export default function HomePage() {
               </h3>
               <p className="text-xs text-slate-500">{tool.desc}</p>
             </Link>
+          ))} */}
+
+          {tools.map((tool) => (
+            <AdLink
+              key={tool.title}
+              href={tool.href}
+              className="flex flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-100 hover:shadow-md hover:-translate-y-0.5 transition"
+            >
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 text-xl">
+                {tool.icon}
+              </div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-1">
+                {tool.title}
+              </h3>
+              <p className="text-xs text-slate-500">{tool.desc}</p>
+            </AdLink>
           ))}
+
 
         </div>
       </section>
-      <AdestraAd/>
+      <AdestraAd />
       {/* SIMPLE FOOTER STRIP (inside page container) */}
       <section className="border-t border-slate-200 pt-6 text-xs text-slate-400 flex flex-wrap items-center justify-between gap-2">
         <p>© {new Date().getFullYear()} resizeme. All rights reserved.</p>
